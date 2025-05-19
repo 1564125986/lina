@@ -1,0 +1,44 @@
+# Site Configuration
+site:
+  title: "李娜的个人主页" # Site title
+  subtitle: "李娜 | NaLi" # Subtitle that appears on homepage
+  author: "李娜" # Site author
+  description: "个人学术网站" # Site description
+  keywords: "学术, 研究, 计算机科学, 人工智能" # For SEO
+  language: "zh-CN" # Site language
+
+# Navigation Menu
+navigation:
+  - title: "HOME"
+    url: "index.htm"
+    active: true
+  - title: "GROUP"
+    url: "group.html"
+    active: false
+  - title: "PUBLICATIONS"
+    url: "Publications.htm"
+    active: false
+  - title: "SERVICES"
+    url: "Services.htm"
+    active: false
+
+# Social Media
+social:
+  email: "na_li126@126.com"
+  homepage: "https://people.ucas.edu.cn/~SIAT_Lina"
+  github: "https://github.com/senli1073"
+
+# Design Settings
+design:
+  theme_color: "#7c72b6" # Main theme color
+  background_color: "#f6f6f6" # Background color
+  text_color: "#4c4b54" # Text color
+  link_color: "#9a9aa6" # Link color
+  accent_color: "#bcb2e4" # Accent color
+
+# Footer Settings
+footer:
+  copyright: "© LiNa 2025-2025. All Rights Reserved."
+  github_text: "Github"
+  license_text: "License"
+  license_url: "https://github.com/senli1073/senli1073.github.io/blob/main/LICENSE"

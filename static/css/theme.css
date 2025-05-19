@@ -1,0 +1,8 @@
+/* Theme CSS - This will be dynamically generated from config.yml */
+:root {
+  --theme-color-custom: #7c72b6;
+  --background-color-custom: #f6f6f6;
+  --text-color-custom: #4c4b54;
+  --link-color-custom: #9a9aa6;
+  --accent-color-custom: #bcb2e4;
+}

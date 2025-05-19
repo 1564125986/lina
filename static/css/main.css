@@ -1,0 +1,366 @@
+/* Main CSS file for academic website template */
+
+/* Global styles */
+:root {
+  --theme-color: #7c72b6;
+  --background-color: #f6f6f6;
+  --text-color: #4c4b54;
+  --link-color: #9a9aa6;
+  --accent-color: #bcb2e4;
+  --header-bg: #f6f6f6;
+  --content-bg: #ffffff;
+  --footer-bg: #dcd4f5;
+  --border-color: #c8c8d0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--theme-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--theme-color);
+  margin-bottom: 1rem;
+}
+
+/* Layout containers */
+#wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+#headerleft {
+  display: flex;
+  align-items: center;
+}
+
+#wsite-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--theme-color);
+}
+
+#navigation {
+  display: flex;
+}
+
+#navigation ul {
+  display: flex;
+  list-style: none;
+}
+
+#navigation ul li {
+  margin-left: 20px;
+  position: relative;
+}
+
+#navigation ul li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+#navigation ul li#active a {
+  color: var(--theme-color);
+}
+
+/* Content area */
+#content {
+  background-color: var(--content-bg);
+  padding: 30px;
+  min-height: calc(100vh - 140px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile section */
+.wsite-multicol {
+  padding: 20px 0;
+}
+
+.wsite-multicol-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wsite-multicol-tbody {
+  width: 100%;
+}
+
+.wsite-multicol-tr {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wsite-multicol-col {
+  padding: 0 15px;
+}
+
+.wsite-image {
+  margin-bottom: 20px;
+}
+
+.wsite-image img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--border-color);
+}
+
+/* Profile text styling */
+h2 {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+h2 font {
+  display: inline-block;
+}
+
+.recruitment {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-left: 4px solid var(--theme-color);
+}
+
+/* Awards section */
+.awards {
+  margin-top: 30px;
+}
+
+.block_title {
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.title_content {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#awards_list {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.awards_item {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.awards_item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--theme-color);
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #navigation {
+    margin-top: 15px;
+  }
+
+  #navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #navigation ul li {
+    margin: 5px 10px;
+  }
+
+  .wsite-multicol-tr {
+    flex-direction: column;
+  }
+
+  .wsite-multicol-col {
+    width: 100% !important;
+    padding: 10px 0;
+  }
+}
+
+/* Publications page */
+.publication-list {
+  margin-top: 20px;
+}
+
+.publication-item {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.publication-title {
+  font-weight: bold;
+}
+
+.publication-authors {
+  font-style: italic;
+}
+
+.publication-journal {
+  margin-top: 5px;
+}
+
+/* Experience page */
+.experience-section {
+  margin-bottom: 30px;
+}
+
+.experience-section h3 {
+  color: var(--theme-color);
+  border-bottom: 2px solid var(--theme-color);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.experience-item {
+  margin-bottom: 15px;
+}
+
+.honor-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.honor-item {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.honor-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--theme-color);
+  font-weight: bold;
+}
+
+/* Group page */
+.team-section {
+  margin-bottom: 30px;
+}
+
+.team-member {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.team-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.team-info {
+  flex: 1;
+}
+
+.team-name {
+  font-weight: bold;
+  color: var(--theme-color);
+}
+
+.team-title {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.team-bio {
+  font-size: 0.9em;
+}
+
+/* Services page */
+.service-section {
+  margin-bottom: 30px;
+}
+
+.service-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.service-item {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.service-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--theme-color);
+}
+
+/* Footer */
+#footer {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--footer-bg);
+  border-top: 1px solid var(--border-color);
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+}
+
+/* Add this to the end to override theme colors with YAML config */
+:root {
+  --theme-color: var(--theme-color-custom, #7c72b6);
+  --background-color: var(--background-color-custom, #f6f6f6);
+  --text-color: var(--text-color-custom, #4c4b54);
+  --link-color: var(--link-color-custom, #9a9aa6);
+  --accent-color: var(--accent-color-custom, #bcb2e4);
+}
